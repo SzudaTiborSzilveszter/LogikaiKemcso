@@ -1,10 +1,10 @@
 package main;
 
 import javax.swing.JButton;
+import javax.swing.ImageIcon;
 
 public class Jatek extends javax.swing.JFrame {
 
-    
     public Jatek() {
         initComponents();
     }
@@ -242,30 +242,63 @@ public class Jatek extends javax.swing.JFrame {
     int klikk = 0;
     //gomb neve: oszlop_sor
     private void btn1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1_2ActionPerformed
-        aktiv = "k";//ezt le kell kérdezni, kép alapján!
         gomb = btn1_2;
+        String kepNeve = gomb.getIcon().toString();
+        int utolsoPer = kepNeve.lastIndexOf('/');
+        char elsoKarakter = kepNeve.charAt(utolsoPer + 1);
+        aktiv=elsoKarakter+"";
         lblInstrukciok.setText("Jelöld, hogy hova rakod!");
-        lblKivalasztva.setText("Kiválsztva: kék");
+        String szin="";
+        if(aktiv.equals("k")){
+            szin="kek";
+        }else if(aktiv.equals("z")){
+            szin="zold";
+        }else if(aktiv.equals("p")){
+            szin="piros";
+        }
+        lblKivalasztva.setText("Kiválasztva: "+ szin);
         klikk++;
-        lblLepesekSzama.setText("Lépések száéma: " + klikk);
+        lblLepesekSzama.setText("Lépések száma: " + klikk);
     }//GEN-LAST:event_btn1_2ActionPerformed
 
     private void btn2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2_2ActionPerformed
-        aktiv = "z";//ezt le kell kérdezni, kép alapján!
         gomb = btn2_2;
+        String kepNeve = gomb.getIcon().toString();
+        int utolsoPer = kepNeve.lastIndexOf('/');
+        char elsoKarakter = kepNeve.charAt(utolsoPer + 1);
+        aktiv=elsoKarakter+"";
         lblInstrukciok.setText("Jelöld, hogy hova rakod!");
-        lblKivalasztva.setText("Kiválsztva: zöld");
+        String szin="";
+        if(aktiv.equals("k")){
+            szin="kek";
+        }else if(aktiv.equals("z")){
+            szin="zold";
+        }else if(aktiv.equals("p")){
+            szin="piros";
+        }
+        lblKivalasztva.setText("Kiválasztva: "+ szin);
         klikk++;
-        lblLepesekSzama.setText("Lépések száéma: " + klikk);
+        lblLepesekSzama.setText("Lépések száma: " + klikk);
     }//GEN-LAST:event_btn2_2ActionPerformed
 
     private void btn3_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3_2ActionPerformed
-        aktiv = "p";//ezt le kell kérdezni, kép alapján!
         gomb = btn3_2;
+        String kepNeve = gomb.getIcon().toString();
+        int utolsoPer = kepNeve.lastIndexOf('/');
+        char elsoKarakter = kepNeve.charAt(utolsoPer + 1);
+        aktiv=elsoKarakter+"";
         lblInstrukciok.setText("Jelöld, hogy hova rakod!");
-        lblKivalasztva.setText("Kiválsztva: piros");
+        String szin="";
+        if(aktiv.equals("k")){
+            szin="kek";
+        }else if(aktiv.equals("z")){
+            szin="zold";
+        }else if(aktiv.equals("p")){
+            szin="piros";
+        }
+        lblKivalasztva.setText("Kiválasztva: "+ szin);
         klikk++;
-        lblLepesekSzama.setText("Lépések száéma: " + klikk);
+        lblLepesekSzama.setText("Lépések száma: " + klikk);
     }//GEN-LAST:event_btn3_2ActionPerformed
 
     private void btn4_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4_4ActionPerformed
